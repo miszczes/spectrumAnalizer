@@ -3,7 +3,7 @@ def WavSpectrum(audioName, show_plots):
     import numpy as np
 
     fs, audiodata = wavfile.read(audioName)
-
+    
     if audiodata.ndim == 2:
         audiodata = StereoToMono(audiodata)
     N = audiodata.shape[0]
